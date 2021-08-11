@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/florian-kuhn/static/css/main.43193e72.chunk.css",
-    "main.js": "/florian-kuhn/static/js/main.76c38ddd.chunk.js",
-    "main.js.map": "/florian-kuhn/static/js/main.76c38ddd.chunk.js.map",
+    "main.css": "/florian-kuhn/static/css/main.df568cd0.chunk.css",
+    "main.js": "/florian-kuhn/static/js/main.6d855636.chunk.js",
+    "main.js.map": "/florian-kuhn/static/js/main.6d855636.chunk.js.map",
     "runtime-main.js": "/florian-kuhn/static/js/runtime-main.376c3310.js",
     "runtime-main.js.map": "/florian-kuhn/static/js/runtime-main.376c3310.js.map",
     "static/js/2.a846d39f.chunk.js": "/florian-kuhn/static/js/2.a846d39f.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.4b18e9f3.chunk.js": "/florian-kuhn/static/js/3.4b18e9f3.chunk.js",
     "static/js/3.4b18e9f3.chunk.js.map": "/florian-kuhn/static/js/3.4b18e9f3.chunk.js.map",
     "index.html": "/florian-kuhn/index.html",
-    "static/css/main.43193e72.chunk.css.map": "/florian-kuhn/static/css/main.43193e72.chunk.css.map",
+    "static/css/main.df568cd0.chunk.css.map": "/florian-kuhn/static/css/main.df568cd0.chunk.css.map",
     "static/js/2.a846d39f.chunk.js.LICENSE.txt": "/florian-kuhn/static/js/2.a846d39f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.376c3310.js",
     "static/js/2.a846d39f.chunk.js",
-    "static/css/main.43193e72.chunk.css",
-    "static/js/main.76c38ddd.chunk.js"
+    "static/css/main.df568cd0.chunk.css",
+    "static/js/main.6d855636.chunk.js"
   ]
 }
