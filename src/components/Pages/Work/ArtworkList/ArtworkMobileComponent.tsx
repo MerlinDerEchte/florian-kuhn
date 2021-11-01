@@ -21,7 +21,7 @@ export const ArtworkMobileComponent: FC<ArtworkMobileProps> = ({
   return (
     <section id={artwork.title} className="flex flex-1 flex-col w-3/4 space-y-3">
       <header
-        className="flex flex-initial text-xl leading-none"
+        className="flex flex-initial h-20 text-xl leading-none"
         onClick={(e) => onSelectArtwork(artwork.title)}
       >
         {artwork.title}

@@ -18,7 +18,7 @@ export const ArtworkListComponent: FC<ArtworkListProps> = ({ artworks }) => {
   };
   const { screenWidth } = useScreenWidthContext();
   return (
-    <div className="flex-1 flex flex-col items-center space-y-2 md:space-y-20 overflow-y-scroll px-10 pb-32">
+    <div className="flex-initial h-full flex flex-col items-start space-y-2 md:space-y-20 overflow-y-scroll px-5 pb-32">
       {artworks.map((aw: IArtworkData) => {
         return (
           <>
