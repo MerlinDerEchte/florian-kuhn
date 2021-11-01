@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/florian-kuhn/static/css/main.a2bec857.chunk.css",
-    "main.js": "/florian-kuhn/static/js/main.5f245013.chunk.js",
-    "main.js.map": "/florian-kuhn/static/js/main.5f245013.chunk.js.map",
+    "main.js": "/florian-kuhn/static/js/main.b21b84bd.chunk.js",
+    "main.js.map": "/florian-kuhn/static/js/main.b21b84bd.chunk.js.map",
     "runtime-main.js": "/florian-kuhn/static/js/runtime-main.376c3310.js",
     "runtime-main.js.map": "/florian-kuhn/static/js/runtime-main.376c3310.js.map",
     "static/js/2.a846d39f.chunk.js": "/florian-kuhn/static/js/2.a846d39f.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.376c3310.js",
     "static/js/2.a846d39f.chunk.js",
     "static/css/main.a2bec857.chunk.css",
-    "static/js/main.5f245013.chunk.js"
+    "static/js/main.b21b84bd.chunk.js"
   ]
 }
