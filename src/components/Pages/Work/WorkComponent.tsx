@@ -45,7 +45,7 @@ export const WorkComponent: FC<any> = () => {
   const titles: string[] = artworks.map((aw: IArtworkData) => aw.title);
   return (
     <PageComponent title="Work">
-      <div className="flex-initial h-full flex flex-row">
+      <div className="flex-initial h-full flex flex-row pt-10">
         {screenWidth > 768 ? <ArtworkTitleListComponent titles={titles} /> : ""}
         <ArtworkListComponent artworks = {artworks} />
       </div>
