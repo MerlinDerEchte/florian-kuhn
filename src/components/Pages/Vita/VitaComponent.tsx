@@ -32,8 +32,8 @@ export const VitaComponent: FC<any> = () => {
 
   return (
     <PageComponent title="Vita">
-      <div className=" flex overflow-y-auto  px-10 flex-col  md:flex-row justify-start">
-        <div className="flex-1 order-2 flex flex-col md:order-1 space-y-5 ">
+      <div className=" flex overflow-y-auto flex-col  md:flex-row justify-start">
+        <div className="flex-1 order-2 flex flex-col md:order-1 space-y-5 text-base">
           {vitaData.content !== EMPTY_DOCUMENT
             ? documentToReactComponents(
                 vitaData.content,

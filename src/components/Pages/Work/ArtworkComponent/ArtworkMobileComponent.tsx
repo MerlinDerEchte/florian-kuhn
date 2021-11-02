@@ -17,9 +17,8 @@ export const ArtworkMobileComponent: FC<ArtworkMobileProps> = ({
   onSelectArtwork,
 }) => {
   const { screenWidth } = useScreenWidthContext();
-  ;
   return (
-    <section id={artwork.title} className="flex flex-1 flex-col w-3/4 space-y-3">
+    <section id={artwork.title} className="flex flex-1 flex-col w-full space-y-3">
       <header
         className="flex flex-initial h-20 text-xl leading-none"
         onClick={(e) => onSelectArtwork(artwork.title)}
@@ -29,7 +28,7 @@ export const ArtworkMobileComponent: FC<ArtworkMobileProps> = ({
       {selectedArtwork === artwork.title && screenWidth <= 768 && 
       
       <div
-        className="flex flex-1 flex-col space-y-10 overflow-hidden"
+        className="flex flex-1 flex-col space-y-5 overflow-hidden"
       >
         <div className="flex flex-1 flex-col space-y-3">
           {documentToReactComponents(

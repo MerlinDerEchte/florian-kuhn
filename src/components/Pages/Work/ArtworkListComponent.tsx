@@ -1,8 +1,8 @@
 import React, { FC, useState } from "react";
 import { useScreenWidthContext } from "../../../contexts/screenWidthContext";
 import { IArtworkData } from "../../../types/IArtworkData";
-import { ArtworkDesktopComponent } from "./ArtworkList/ArtworkDesktopComponent";
-import { ArtworkMobileComponent } from "./ArtworkList/ArtworkMobileComponent";
+import { ArtworkDesktopComponent } from "./ArtworkComponent/ArtworkDesktopComponent";
+import { ArtworkMobileComponent } from "./ArtworkComponent/ArtworkMobileComponent";
 type ArtworkListProps = {
   artworks: IArtworkData[];
 };
@@ -16,9 +16,16 @@ export const ArtworkListComponent: FC<ArtworkListProps> = ({ artworks }) => {
       setSelectedArtwork(title);
     }
   };
+
+  const onSelectArtworkMobile = (title: string) => {
+    onSelectArtwork(title);
+    const renderTimeout = setTimeout(() => {
+        document.getElementById(title)?.scrollIntoView({block: "start", behavior: "smooth"});
+    }, 500)
+  }
   const { screenWidth } = useScreenWidthContext();
   return (
-    <div className="flex-initial h-full flex flex-col items-start space-y-2 md:space-y-20 overflow-scroll px-5 pb-32">
+    <div className="flex-1 h-full flex flex-col items-start space-y-2 md:space-y-20 overflow-y-scroll px-5 pb-32">
       {artworks.map((aw: IArtworkData) => {
         return (
           <>
@@ -32,7 +39,7 @@ export const ArtworkListComponent: FC<ArtworkListProps> = ({ artworks }) => {
               <ArtworkMobileComponent
                 artwork={aw}
                 selectedArtwork={selectedArtwork}
-                onSelectArtwork={onSelectArtwork}
+                onSelectArtwork={onSelectArtworkMobile}
               />
             )}
           </>

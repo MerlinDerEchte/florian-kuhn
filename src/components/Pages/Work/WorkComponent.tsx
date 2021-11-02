@@ -5,7 +5,7 @@ import { GET_ARTOWRKS } from "../../../queries/getArtworks";
 import { useQuery } from "@apollo/client";
 import { useScreenWidthContext } from "../../../contexts/screenWidthContext";
 import { IArtworkData } from "../../../types/IArtworkData";
-import {ArtworkListComponent} from './ArtworkListComponent';
+import { ArtworkListComponent } from "./ArtworkListComponent";
 
 export const WorkComponent: FC<any> = () => {
   const { loading, error, data } = useQuery(GET_ARTOWRKS);
@@ -38,16 +38,22 @@ export const WorkComponent: FC<any> = () => {
       setArtworks(artworks);
     }
   }, [data]);
-  
-  useEffect(()=>{
 
-  },[screenWidth])
+  useEffect(() => {}, [screenWidth]);
   const titles: string[] = artworks.map((aw: IArtworkData) => aw.title);
+
+  if (!data) {
+    return null;
+  }
+
   return (
     <PageComponent title="Work">
-      <div className="flex-initial h-full flex flex-row pt-7">
+      <div
+        className="flex-1 h-full flex flex-row pt-7"
+        onTouchMove={(e) => e.stopPropagation()}
+      >
         {screenWidth > 768 ? <ArtworkTitleListComponent titles={titles} /> : ""}
-        <ArtworkListComponent artworks = {artworks} />
+        <ArtworkListComponent artworks={artworks} />
       </div>
     </PageComponent>
   );

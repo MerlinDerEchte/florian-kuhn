@@ -19,8 +19,9 @@ export const ArtworkDesktopComponent: FC<ArtworkDesktopProps> = ({
   onSelectArtwork,
 }) => {
   const [showArtworkGalery, setShowArtworkGalery] = useState<boolean>(false);
+  
   return (
-    <section id={artwork.title} className="flex flex-1 flex-row w-3/4 items-stretch">
+    <section id={artwork.title} className="flex flex-initial flex-row w-3/4 items-stretch">
       {showArtworkGalery ? (
         <GaleryComponent
           images={artwork.images}
@@ -29,7 +30,7 @@ export const ArtworkDesktopComponent: FC<ArtworkDesktopProps> = ({
       ) : (
         ""
       )}
-      <div className="flex-1 flex flex-col justify-start w-3/5 space-y-3">
+      <div className="flex-initial flex flex-col justify-start w-3/5 space-y-3">
         <h2 className="flex-initial text-xl ">{artwork.title}</h2>
         <div className="flex-1 text-base">
           {documentToReactComponents(
@@ -50,7 +51,7 @@ export const ArtworkDesktopComponent: FC<ArtworkDesktopProps> = ({
           )}
         </div>
       </div>
-      <div className="flex-1 flex flex-row justify-center items-start ">
+      <div className="flex-initial w-2/5 flex flex-row justify-center items-start ">
         <LazyLoad height={800} offset={200} overflow scroll once placeholder="loading">
           <img
             className="cursor-pointer"

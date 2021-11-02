@@ -11,7 +11,7 @@ import {
   useQuery,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-import { HashRouter as Router, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Route, NavLink } from "react-router-dom";
 import { ScreenWidthContext } from "./contexts/screenWidthContext";
 import { NavButton } from "./components/Nav/NavButton";
 import { Navbar } from "./components/Nav/Navbar";
@@ -37,7 +37,6 @@ const client = new ApolloClient({
 function App() {
   const [screenWidth, setScreenWidth] = useState<number>(1000);
   const [showNav, setShowNav] = useState<ENavState>(ENavState.INITIAL);
-
   useEffect(() => {
     setScreenWidth(window.innerWidth);
 
@@ -58,18 +57,21 @@ function App() {
           <div className="h-screen flex flex-col overvlow-hidden" onClick={e => setShowNav(ENavState.HIDDEN)}>
             <header className=" h-10 flex-initial flex-row">
               <div className="flex-1 flex px-5 flex flex-row content-stretch font-mono">
-                <div className="flex-1 text-2xl">Florian Kuhn</div>
                 {screenWidth && screenWidth > 768 ? (
                   <nav className="hidden md:flex-1 md:flex md:flex-column md:justify-end">
-                    <ul className="flex-1 list-none flex flex-row justify-evenly content-end py-2 leading-none">
-                      <li>
-                        <Link to="/work">work</Link>
+                    <ul className="flex-1 list-none flex flex-row justify-evenly content-center py-2 leading-none">
+                      
+                    <li>
+                        <NavLink  activeClassName="underline" to="/contact"><b>Home</b></NavLink>
                       </li>
                       <li>
-                        <Link to="/vita">vita</Link>
+                        <NavLink activeClassName="underline" to="/work"><b>Work</b></NavLink>
                       </li>
                       <li>
-                        <Link to="/contact">contact</Link>
+                        <NavLink  activeClassName="underline" to="/vita"><b>Vita</b></NavLink>
+                      </li>
+                      <li>
+                        <NavLink  activeClassName="underline" to="/contact"><b>Contact</b></NavLink>
                       </li>
                     </ul>
                   </nav>
